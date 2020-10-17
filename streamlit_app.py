@@ -22,7 +22,7 @@ response = google_images_download.googleimagesdownload()
 
 st.markdown('# Welcome to **aiadventures** 👋')
 st.markdown('**[aiadventures](https://www.aiadventures.in/)** is, a Pune based start-up, helping people to get started with **Data Science** and **Machine Learning** through our hands-on training programs.')
-st.markdown('### Image Scraper')
+st.markdown('## Image Scraper')
 st.markdown('Deep Learning (CNNs) models requires tonnes of images to train. Often the process of collecting images (for custom dataset) is not easy. Search engines like bing and google make it even difficult to scrap images.')
 st.markdown('#### How-to use')
 st.markdown('Search for the keyword on google, if the images are exactly what you are looking for, then copy and paste the keywords in the field 👇')
