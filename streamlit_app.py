@@ -42,8 +42,9 @@ if keyword:
     content = '\n'.join(paths[0][keyword])
     href = get_link(content, keyword)
     st.markdown(href, unsafe_allow_html=True)
-
-    st.markdown('You can download and verify all the images using helper functions from fastai\'s vision module. Code Snippet 👇. Refer [docs](https://docs.fast.ai/tutorial.vision) for more.')
+    
+    st.markdown('#### Usage')
+    st.markdown('\nYou can download and verify all the images using helper functions from fastai\'s vision module. Code Snippet 👇. Refer [docs](https://docs.fast.ai/tutorial.vision) for more.')
 
     code = '''
 from fastai.vision.all import *
