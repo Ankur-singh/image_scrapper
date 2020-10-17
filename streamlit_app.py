@@ -5,7 +5,16 @@ from google_images_download import google_images_download
 def get_link(content, keyword):
     b64 = base64.b64encode(content.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'''<div align=center style="margin:20px"> 
-                <a download="{keyword}.txt" href="data:file/txt;base64,{b64}">Download {keyword}.txt file</a>
+                <a download="{keyword}.txt" href="data:file/txt;base64,{b64}" style="display: block;
+    width: 400px;
+    height: 43px;
+    background: green;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;">Download {keyword}.txt file</a>
              </div>'''
     return href
 
@@ -17,14 +26,14 @@ st.markdown('### Image Scraper')
 st.markdown('Deep Learning (CNNs) models requires tonnes of images to train. Often the process of collecting images (for custom dataset) is not easy. Search engines like bing and google make it even difficult to scrap images.')
 st.markdown('#### How-to use')
 st.markdown('Search for the keyword on google, if the images are exactly what you are looking for, then copy and paste the keywords in the field 👇')
-st.markdown('**Note:** Resources are limited. You can only download maximum 50 images at once. If you want to download more images then drop us an [email](mailto:aiadventures.pune@gmail.com). We will try to make an exception!😉')
+st.markdown('**Note:** Resources are limited. You can only download maximum 99 images at once. If you want to download more images then drop us an [email](mailto:aiadventures.pune@gmail.com). We will try to make an exception!😉')
 st.markdown('')
 
 
 left_column, right_column = st.beta_columns([2,1])
 keyword = left_column.text_input('Keyword')
 limit = right_column.number_input('Number of image urls',
-                                   min_value=5, max_value=150, step=1)
+                                   min_value=5, max_value=99, step=1)
 
 if keyword:
     arguments = {"keywords":keyword, "limit":limit, "chromedriver": 'chromedriver', "silent_mode":True, "no_download":True}
