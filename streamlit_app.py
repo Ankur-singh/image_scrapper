@@ -6,8 +6,9 @@ def get_link(content, keyword):
     b64 = base64.b64encode(content.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'''<div align=center style="margin:20px"> 
                 <a download="{keyword}.txt" href="data:file/txt;base64,{b64}" style="display: block;
-    width: 80%;
-    height: 43px;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
     background: green;
     padding: 10px;
     text-align: center;
