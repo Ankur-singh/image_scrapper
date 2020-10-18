@@ -6,7 +6,7 @@ def get_link(content, keyword):
     b64 = base64.b64encode(content.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'''<div align=center style="margin:20px"> 
                 <a download="{keyword}.txt" href="data:file/txt;base64,{b64}" style="display: block;
-    width: 400px;
+    width: 80%;
     height: 43px;
     background: green;
     padding: 10px;
@@ -20,13 +20,11 @@ def get_link(content, keyword):
 
 response = google_images_download.googleimagesdownload()
 
-st.markdown('# Welcome to **aiadventures** 👋')
-st.markdown('**[aiadventures](https://www.aiadventures.in/)** is, a Pune based start-up, helping people to get started with **Data Science** and **Machine Learning** through our hands-on training programs.')
-st.markdown('## Image Scraper')
+st.markdown('# Image URL Scraper 🕸')
 st.markdown('Deep Learning (CNNs) models requires tonnes of images to train. Often the process of collecting images (for custom dataset) is not easy. Search engines like bing and google make it even difficult to scrap images.')
 st.markdown('#### How-to use')
-st.markdown('Search for the keyword on google, if the images are exactly what you are looking for, then copy and paste the keywords in the field 👇')
-st.markdown('**Note:** Resources are limited. You can only download maximum 99 images at once. If you want to download more images then drop us an [email](mailto:aiadventures.pune@gmail.com). We will try to make an exception!😉')
+st.markdown('Search for the keyword on google, narrow down the search by adding more relevant keyword. Keep doing it until you don\'t get the exact images for your dataset, then copy and paste the keywords in the field 👇')
+st.markdown('**Note:** You can only scrape 99 urls, at once. If you want to scrape more urls then refer [sample usage notebook](https://github.com/Ankur-singh/image_scrapper/blob/master/sample_usage.ipynb)😉')
 st.markdown('')
 
 
