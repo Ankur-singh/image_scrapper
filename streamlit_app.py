@@ -21,7 +21,7 @@ def get_link(content, keyword):
 response = google_images_download.googleimagesdownload()
 
 st.markdown('# Image URL Scraper 🕸')
-st.markdown('Deep Learning (CNNs) models requires tonnes of images to train. Often the process of collecting images (for custom dataset) is not easy. Search engines like bing and google make it even difficult to scrap images.')
+st.markdown('Often the process of collecting images (for custom dataset) is not easy. Search engines like bing and google make it even difficult to scrap images (by using AJAX calls and encrypted URLs).')
 st.markdown('#### How-to use')
 st.markdown('Search for the keyword on google, narrow down the search by adding more relevant keyword. Keep doing it until you don\'t get the exact images for your dataset, then copy and paste the keywords in the field 👇')
 st.markdown('**Note:** You can only scrape 99 urls, at once. If you want to scrape more urls then refer [sample usage notebook](https://github.com/Ankur-singh/image_scrapper/blob/master/sample_usage.ipynb)😉')
