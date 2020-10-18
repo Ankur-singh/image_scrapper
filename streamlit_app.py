@@ -14,7 +14,7 @@ def get_link(content, keyword):
     border-radius: 10px;
     color: white;
     font-weight: bold;
-    line-height: 25px;">Download {keyword}.txt file</a>
+    line-height: 25px;">Download {keyword}.txt</a>
              </div>'''
     return href
 
@@ -34,14 +34,18 @@ limit = right_column.number_input('Number of image urls',
                                    min_value=5, max_value=99, step=1)
 
 if keyword:
-    arguments = {"keywords":keyword, "limit":limit, "chromedriver": 'chromedriver', "silent_mode":True, "no_download":True}
-    paths = response.download(arguments)
+    arguments = {"keywords":keyword, 
+                 "limit":limit, 
+                 "chromedriver": 'chromedriver',  
+                 "silent_mode":True, 
+                 "no_download":True}
     
-    content = '\n'.join(paths[0][keyword])
+    urls = response.download(arguments)[0]
+    content = '\n'.join(urls[keyword])
+    
     href = get_link(content, keyword)
     st.markdown(href, unsafe_allow_html=True)
     
-    st.markdown('#### Usage')
     st.markdown('\nYou can download and verify all the images using helper functions from fastai\'s vision module. Code Snippet 👇. Refer [docs](https://docs.fast.ai/tutorial.vision) for more.')
 
     code = '''
