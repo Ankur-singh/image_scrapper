@@ -35,7 +35,7 @@ limit = middle_column.number_input('Number of image urls',
                                    min_value=5, max_value=99, step=1)
 predict = right_column.button('Get URLs')
 
-if Keyword and limit and predict:
+if keyword and limit and predict:
     arguments = {"keywords":keyword, 
                  "limit":limit, 
                  "chromedriver": 'chromedriver',  
