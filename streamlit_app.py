@@ -29,12 +29,12 @@ st.markdown('**Note:** You can only scrape 99 urls, at once. If you want to scra
 st.markdown('')
 
 
-left_column, middle_column, right_column = st.beta_columns([2,1, 1])
+left_column, right_column = st.beta_columns([2,1])
 keyword = left_column.text_input('Keyword')
-limit = middle_column.number_input('Number of image urls',
+limit = right_column.number_input('Number of image urls',
                                    min_value=5, max_value=99, step=1)
-predict = right_column.button('Get URLs')
 
+predict = st.button('Get URLs')
 if keyword and limit and predict:
     arguments = {"keywords":keyword, 
                  "limit":limit, 
