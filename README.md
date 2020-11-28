@@ -1,4 +1,4 @@
-# Image url scraper
+# Image url scraper [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/ankur-singh/image_scrapper)
 Handy little tool to scrape urls of images from google. 
 - Demo app : https://share.streamlit.io/ankur-singh/image_scrapper
 
